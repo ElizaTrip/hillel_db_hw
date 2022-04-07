@@ -15,7 +15,7 @@
             border-bottom: 1px double red;
             margin: 10px 20px;
         }
-        .title1, .data1, .desc1 {
+        .title1, .data1, .desc1, .id1 {
             font-weight: bold;
         }
         .desc2 {
@@ -31,9 +31,10 @@
 
 {% for post in posts %}
     <div class="post">
-        <div><span class="data1">data:</span><span class="data2">{{post[3]}}</span></div>
-        <div class="title"><span class="title1">title:</span><span class="title2">{{post[1]}}</span></div>
-        <div class="desc1">description:</div>
+        <div><span class="id1">id: </span><span class="id2">{{post[0]}}</span></div>
+        <div><span class="data1">data: </span><span class="data2">{{post[3]}}</span></div>
+        <div class="title"><span class="title1">title: </span><span class="title2">{{post[1]}}</span></div>
+        <div class="desc1">description: </div>
         <div class ="desc2">{{post[2]}}</div>
         <a href="/delete?id={{post[0]}}">Удалить пост</a>
     </div>

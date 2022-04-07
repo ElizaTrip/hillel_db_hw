@@ -121,4 +121,3 @@ def delete_post():
     connection.close()
 
     return redirect('/')
-
