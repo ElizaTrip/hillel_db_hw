@@ -1,4 +1,5 @@
 import sqlite3
+#Создание базы данных
 
 connection = sqlite3.connect("blog.sqlite")
 cur = connection.cursor()

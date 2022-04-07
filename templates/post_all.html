@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <style>
+        /* Контейнер всего сайта */
+        .container {
+            width: 800px;
+            border: 1px solid blue;
+        }
+        h3 {text-align: center;}
+        /* Контейнер поста */
+        .post {
+            border-bottom: 1px double red;
+            margin: 10px 20px;
+        }
+        .title1, .data1, .desc1 {
+            font-weight: bold;
+        }
+        .desc2 {
+            text-align: justify;
+            border: 1px solid grey;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Посты созданные на блоге</h3>
+
+{% for post in posts %}
+    <div class="post">
+        <div><span class="data1">data:</span><span class="data2">{{post[3]}}</span></div>
+        <div class="title"><span class="title1">title:</span><span class="title2">{{post[1]}}</span></div>
+        <div class="desc1">description:</div>
+        <div class ="desc2">{{post[2]}}</div>
+        <a href="/delete?id={{post[0]}}">Удалить пост</a>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
